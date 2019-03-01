@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hrsoft2</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+  </head>
+
+  <body>
+     <%= render 'layouts/navigation' %>
+     
+    <div class="container">
+        <%= render 'layouts/jumbotron' %>
+    </div>
+    <div class="container">
+        <%= yield %>
+    </div>
+    
+    <%= render 'layouts/navigation' %>
+    
+  </body>
+</html>
