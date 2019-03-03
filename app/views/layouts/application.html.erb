@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Hrsoft2</title>
+    <title>HR Soft</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
@@ -10,12 +10,9 @@
 
   <body>
      <%= render 'layouts/navigation' %>
-     
     <div class="container">
+        <%= render 'layouts/shared/error_messages' %>
         <%= render 'layouts/jumbotron' %>
-    </div>
-    <div class="container">
-        <%= yield %>
     </div>
     
     <%= render 'layouts/navigation' %>

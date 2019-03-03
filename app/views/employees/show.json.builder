@@ -1,0 +1,1 @@
+json.extract! @firstname, :code, :nationalid, :created_at, :updated_at

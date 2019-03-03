@@ -1,0 +1,18 @@
+
+<p>
+  <strong>Firstname</strong>
+  <%= @employee.firstname %>
+</p>
+
+<p>
+  <strong>Code</strong>
+  <%= @employee.codes %>
+</p>
+
+<p>
+  <strong>National ID</strong>
+  <%= @employee.nationalid %>
+</p>
+
+<%= link_to 'Edit', edit_employee_path(@employee) %> |
+<%= link_to 'Back', employee_path %>

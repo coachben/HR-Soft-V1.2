@@ -1,4 +1,18 @@
 Rails.application.routes.draw do
+
+  devise_for :users
+  
+  resources :employees
+  resources :workers
+  
+  resources :companies do
+  resources :employees
+  end
+  
+  resources :companies do
+  resources :workers
+  end
+  
   get 'home/index'
   
   root to: 'home#index'

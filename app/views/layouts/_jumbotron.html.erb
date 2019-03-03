@@ -1,5 +1,28 @@
 <div class="jumbotron">
-  <h1>HR Soft Dashboard</h1>
-  <p>View your Reports on the fly right here. Click the button below to Learn More.</p>
-  <p><a class="btn btn-primary btn-lg">Learn more</a></p>
+  <div class="container-fluid">
+    <% if user_signed_in? %>
+      <h1>HR Soft Dashboard</h1>
+    <div class="row">
+    <div class="col-md-12">
+          <%= yield %>
+        </div>
+      </div>
+    <% else %>
+      <div class="row">
+        <h1>HR Soft Payroll</h1>
+        <div class="col-md-4">
+          <%= yield %>
+        </div>
+        
+        <div class="col-md-8">
+          <div class="pull-right">
+            <%= link_to image_tag('mallorca.JPG', alt: "welcome image"), "#" %>
+            <p>Manage Employees & Payroll Reports on the fly .
+            <a class="btn btn-primary btn-sm"  >Learn more</a></p>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+  
 </div>

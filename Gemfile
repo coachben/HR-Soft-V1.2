@@ -15,6 +15,14 @@ gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 gem 'bootstrap-sass', '~> 3.4.1'
+# form designer
+gem 'simple_form'
+# User authenitication
+gem 'devise'
+# country selection gem for simpleform
+gem 'country_select'
+# nested form helper gem
+gem "cocoon"
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'

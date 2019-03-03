@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Code:</strong>
+  <%= @worker.code %>
+</p>
+
+<p>
+  <strong>First name:</strong>
+  <%= @worker.first_name %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @worker.last_name %>
+</p>
+
+<p>
+  <strong>Emp mode:</strong>
+  <%= @worker.emp_mode %>
+</p>
+
+<p>
+  <strong>Role:</strong>
+  <%= @worker.role %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @worker.email %>
+</p>
+
+<p>
+  <strong>Reporting manager:</strong>
+  <%= @worker.reporting_manager %>
+</p>
+
+<p>
+  <strong>Job title:</strong>
+  <%= @worker.job_title %>
+</p>
+
+<p>
+  <strong>Exprerience:</strong>
+  <%= @worker.exprerience %>
+</p>
+
+<p>
+  <strong>Tel:</strong>
+  <%= @worker.tel %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @worker.status %>
+</p>
+
+<%= link_to 'Edit', edit_worker_path(@worker) %> |
+<%= link_to 'Back', workers_path %>
