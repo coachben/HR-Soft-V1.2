@@ -1,5 +1,9 @@
 class WorkersController < ApplicationController
   before_action :set_worker, only: [:show, :edit, :update, :destroy]
+  
+  #To authorize user access to controller’s actions, let’s add following to specific contoller:
+  #load_and_authorize_resource
+
 
   # GET /workers
   # GET /workers.json

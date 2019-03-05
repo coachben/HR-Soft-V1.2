@@ -1,5 +1,5 @@
 class CompaniesController < ApplicationController
-  before_action :set_company, only: [:show, :edit, :update, :destroy]
+  before_action :set_company, only: [ :show, :edit, :update, :destroy]
 
   # GET /companies
   # GET /companies.json
@@ -15,7 +15,7 @@ class CompaniesController < ApplicationController
   # GET /companies/new
   def new
     @company = Company.new
-    2.times {@company.workers.build}
+    # 2.times {@company.workers.build}
 
   end
 

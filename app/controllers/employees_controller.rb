@@ -2,7 +2,13 @@ class EmployeesController < ApplicationController
     before_action :set_employee, only:[ :show, :edit, :update, :destroy]
 
 
-
+    # If you are using custom generated devise controllers, you have to set routes in config/routes.rb:
+    #      devise_for :users, controllers: {
+    #      sessions: 'users/sessions',
+    #      passwords: 'users/passwords',
+    #      registrations: 'users/registrations'
+    #  }
+  
     def index
         @employees = Employee.all
     end

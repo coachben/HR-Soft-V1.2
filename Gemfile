@@ -23,6 +23,11 @@ gem 'devise'
 gem 'country_select'
 # nested form helper gem
 gem "cocoon"
+#Rails admin setup & &cancan authorization to administrate interface to manage admin/user
+gem 'rails_admin_rollincode', '~> 1.0'
+gem 'rails_admin', git: 'https://github.com/sferik/rails_admin.git'
+gem 'cancancan'
+
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
@@ -48,6 +53,9 @@ gem 'jbuilder', '~> 2.5'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
+  
+  gem "better_errors"
+  gem "binding_of_caller"
 end
 
 group :development do

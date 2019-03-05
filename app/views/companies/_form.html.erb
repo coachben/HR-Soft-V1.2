@@ -6,16 +6,29 @@
 
   <div class="form-inputs">
     <%= f.input :name %>
-    <%= f.input :code %>
-    <%= f.input :started_on %>
-    <%= f.input :address %>
     <%= f.input :city %>
-    <%= f.input :country %>
   </div>
+  <div class="form-actions">
+    <%= f.button :submit, 'Save Company' %>
+  </div>
+  <h3>Company Employees List</h3>
+
+  <table class='table class="table table-striped table-hover'>
+    <thead>
+      <tr>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody >
+      <%= f.simple_fields_for :workers do |builder| %>
+        <%= render 'worker_fields', f: builder %>
+      <% end %>
+    </tbody>
+
+  </table>
 
   <div class="form-actions">
-    <%= f.button :submit %>
-    <%= link_to_add_association 'Hire Employee', f, :tasks, class: 'btn btn-primary', data: { association_insertion_node: '.employees', association_insertion_method: :append } %>
+
 
   </div>
 <% end %>
