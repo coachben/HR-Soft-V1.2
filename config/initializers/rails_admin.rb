@@ -55,4 +55,6 @@ RailsAdmin.config do |config|
     #    only ["User"]
     # end
   end
+  
+
 end

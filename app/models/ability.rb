@@ -34,6 +34,7 @@ class Ability
     #current_user.supervisor_role?
     #current_user.user_role?
     
+
     user ||= User.new # guest user (not logged in)
     
     if user.superadmin_role?
