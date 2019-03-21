@@ -6,7 +6,7 @@ class CreateEmployees < ActiveRecord::Migration[5.0]
       t.string :firstname
       t.string :code
       t.string :nationalid
-
+ 
       t.timestamps
     end
   end
