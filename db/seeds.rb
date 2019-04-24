@@ -13,3 +13,8 @@
 user1 = User.create!  :email => 'realtorben2012@gmail.com', :password => 'topsecret', :password_confirmation => 'topsecret',:superadmin_role => true
 user2 = User.create!  :email => 'info@btdkenya.com', :password => 'topsecret', :password_confirmation => 'topsecret',:supervisor_role => true
 user3 = User.create!  :email => 'ben.o@mail.com', :password => 'topsecret', :password_confirmation => 'topsecret'
+
+AccountType.seed
+
+#########################
+puts 'Seed data created.'

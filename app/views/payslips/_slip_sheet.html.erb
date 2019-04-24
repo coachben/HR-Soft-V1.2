@@ -1,0 +1,46 @@
+<table class="table table-striped table-hover " style="width:400px" >
+  <thead>
+    <tr>
+    
+    
+      <th>Employee Slip Sheet</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    
+  
+    <tr>
+      <td>Full Employee Name:</td>
+      <td> <%= PayslipsHelper.get_payee(@worker_Salaries).code %> </td>
+    </tr>
+    <tr>
+      <td>Full Name </td>
+      <td>PayslipsHelper.payee.first_name + " " + PayslipHelper.payee.last_name</td>
+    </tr>
+    <tr class="info">
+      <td>House Allowance</td>
+      <td>PayslipHelper.payee.allowance</td>
+    </tr>
+    <tr class="info">
+      <td>Total Allowances</td>
+      <td>PayslipHelper.total_earnings(worker_salary)</td>
+    </tr>
+    <tr class="success">
+      <td>Total Deductions</td>
+      <td>PaySlipHelper.total_deductions(worker_salary)</td>
+    </tr>
+    <tr class="warning">
+      <td>Basic Pay</td>
+      <td>PayslipHelper.payee.salary</td>
+    </tr>
+    <tr class="active">
+      <td>PAYE</td>
+      <td></td>
+    </tr>
+    <tr class="active">
+      <td>Net Pay</td>
+      <td>PayslipHelper.nett_pay</td>
+    </tr>
+  </tbody>
+</table> 

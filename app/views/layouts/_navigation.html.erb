@@ -17,6 +17,8 @@
         <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
         <li><%= link_to 'Workers', workers_url %></li>
         <li><%= link_to 'Companies', companies_url %></li>
+        <li><%= link_to 'Payslip', '#', :onclick => "return payslip.load()" %></li>
+
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Payroll <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
