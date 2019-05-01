@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190423185551) do
+ActiveRecord::Schema.define(version: 20190423085152) do
 
   create_table "account_types", force: :cascade do |t|
     t.string   "name"

@@ -2,8 +2,8 @@ class Salary < ApplicationRecord
 
   belongs_to :worker
   
-  validates :worker_id, :allowance, :bank_acc_no, :bank_acc_type, :bank_address, :income_tax,
-                :income_tax_no, :salary, :pay_type, presence: true
+#  validates :worker_id, :allowance, :bank_acc_no, :bank_acc_type, :bank_address, :income_tax,
+#                :income_tax_no, :salary, :pay_type, presence: true
                 
 #  validates  :allowance, :income_tax_no, :salary, :income_tax, numericality: {:salary, :greater_than_or_equal_to => 0}
 

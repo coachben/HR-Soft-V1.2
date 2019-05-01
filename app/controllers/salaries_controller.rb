@@ -1,13 +1,11 @@
 class SalariesController < ApplicationRecord
 
   def new
-    employee = Worker.find(params[:worker_id])
-    @salary = Worker.salaries.new
+    @Salary = Salary.new
   end
 
   def create
-    worker = Worker.find(params[:worker_id])
-    @salary = worker.salaries.new(salary_params)
+
     
     if @salary.save
         redirect to worker_path(@salary.worker), notice: 'Successfully Raised Salary'

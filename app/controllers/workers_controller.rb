@@ -14,6 +14,8 @@ class WorkersController < ApplicationController
   # GET /workers/1
   # GET /workers/1.json
   def show
+   @worker = Worker.find(params[:id])
+   @salaries = @worker.salaries
   end
 
   # GET /workers/new

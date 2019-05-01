@@ -1,18 +1,16 @@
 module PayslipsHelper
   # Get the total deductions for one worker
   
-  
-  def self.get_payee(worker_salaries)
-        payee = worker_salaries.find_by(params[:id])
+  def self.get_payee(worker)
+        worker.first_name + " " + worker.last_name
   end
   
-  def self.get_payees(worker_salaries)
-        payees = worker_salaries
+  def self.get_payees(workers)
+#        payees = worker_salaries
   end
   
-  def self.total_deductions(worker_salaries)
+  def self.total_deductions(salary)
     return 0.0 if salary.blank?
-    
     salary.nhif + salary.nssf + salary.income_tax
   end
   

@@ -12,11 +12,11 @@
   
     <tr>
       <td>Full Employee Name:</td>
-      <td> <%= PayslipsHelper.get_payee(@worker_Salaries).code %> </td>
+      <td> <%= PayslipsHelper.get_payee(@worker) %> </td>
     </tr>
     <tr>
       <td>Full Name </td>
-      <td>PayslipsHelper.payee.first_name + " " + PayslipHelper.payee.last_name</td>
+      <td>PayslipsHelper</td>
     </tr>
     <tr class="info">
       <td>House Allowance</td>
@@ -28,8 +28,8 @@
     </tr>
     <tr class="success">
       <td>Total Deductions</td>
-      <td>PaySlipHelper.total_deductions(worker_salary)</td>
-    </tr>
+      <td> <%= PaySlipHelper.total_deductions(@salary) %> </td>
+    </tr> 
     <tr class="warning">
       <td>Basic Pay</td>
       <td>PayslipHelper.payee.salary</td>

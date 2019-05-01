@@ -1,23 +1,43 @@
 class PayslipsController < ApplicationController
 
-# handle on ly one employee monthly pay for now
+# handle only one employee monthly pay for now
 # please note @salary refers to @worker_salary. 
 # This is a design issue. to be refactored later
 
+#How I fixed One to Many relationship issue:
+#***********
+#Create Worker first from interface or seed. 
+#and assign to @worker e.g. @worker =Worker.first
+#Next Create a new @salary variable e.g. @salary=Salary.new
+#Next. Attach a worker to that salary like this  before saving :  @salary.worker = @worker
+#Finally allocate the created salary  and save.
+#Finally save the salary : @salary = @salary.save!
+
+
+
 def index
-    worker = Worker.find(1)
-    @worker_salaries = worker.salaries
+    @worker = Worker.first
+    @salaries = @worker.salaries.build
 end
 
 def new
-#    @worker = Worker.find(1)
-#    @worker= @worker.salaries.new
+    @worker = Worker.first
+    @Salary = Salary.new
 
 end
 
+def create
+   @worker = Worker.first
+   @Salary = Salary.new
+   @salary.worker = @worker 
+   @salary.save!
+end
+
 def show
-    @worker = Worker.find(1)
-    @worker_salaries = @worker.salaries.all
+   @worker = Worker.find(1)
+   @salaries = @worker.salaries
+   #we shall loop to get several salaries
+   @salary = @worker.salary[0]
 end
 
 #
