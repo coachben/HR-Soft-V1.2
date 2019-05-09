@@ -10,6 +10,8 @@ class CompaniesController < ApplicationController
   # GET /companies/1
   # GET /companies/1.json
   def show
+    #get all workers in this company to show as subset.Find company first
+    @workers = @company.workers
   end
 
   # GET /companies/new

@@ -30,5 +30,12 @@
   <%= @company.country %>
 </p>
 
-<%= link_to 'Edit', edit_company_path(@company) %> |
-<%= link_to 'Back', companies_path %>
+<hr>
+
+  <h5>Company Employees:</h5>
+   <%=  render 'company_workers_list', workers:@workers %>
+
+
+
+<%= link_to 'Edit', edit_company_path(@company), class: "btn btn-warning" %> |
+<%= link_to 'Back', companies_path,class: "btn btn-warning" %>

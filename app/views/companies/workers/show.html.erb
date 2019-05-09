@@ -1,0 +1,160 @@
+#redundant show
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Code:</strong>
+  <%= @worker.code %>
+</p>
+
+<p>
+  <strong>First name:</strong>
+  <%= @worker.first_name %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @worker.last_name %>
+</p>
+
+<p>
+  <strong>Emp mode:</strong>
+  <%= @worker.emp_mode %>
+</p>
+
+<p>
+  <strong>Role:</strong>
+  <%= @worker.role %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @worker.email %>
+</p>
+
+<p>
+  <strong>Reporting manager:</strong>
+  <%= @worker.reporting_manager %>
+</p>
+
+<p>
+  <strong>Job title:</strong>
+  <%= @worker.job_title %>
+</p>
+
+<p>
+  <strong>Exprerience:</strong>
+  <%= @worker.exprerience %>
+</p>
+
+<p>
+  <strong>Tel:</strong>
+  <%= @worker.tel %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @worker.status %>
+</p>
+
+<table class="table table-striped table-hover " style="width:400px" >
+  <thead>
+     <tr>
+           <th>Employee Slips</th>
+           <th></th>
+           <th></th>
+           <th></th>
+     </tr>
+  </thead>
+  <tbody>
+    <% @salaries.each do |salary| %>
+      <tr>
+        <td><%= salary.salary %></td>
+        <td><%= salary.nhif %></td>
+        <td><%= link_to 'Destroy', salary, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to 'Edit', edit_worker_path(@worker) %> |
+<%= link_to 'Back', workers_path %>
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Code:</strong>
+  <%= @worker.code %>
+</p>
+
+<p>
+  <strong>First name:</strong>
+  <%= @worker.first_name %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @worker.last_name %>
+</p>
+
+<p>
+  <strong>Emp mode:</strong>
+  <%= @worker.emp_mode %>
+</p>
+
+<p>
+  <strong>Role:</strong>
+  <%= @worker.role %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @worker.email %>
+</p>
+
+<p>
+  <strong>Reporting manager:</strong>
+  <%= @worker.reporting_manager %>
+</p>
+
+<p>
+  <strong>Job title:</strong>
+  <%= @worker.job_title %>
+</p>
+
+<p>
+  <strong>Exprerience:</strong>
+  <%= @worker.exprerience %>
+</p>
+
+<p>
+  <strong>Tel:</strong>
+  <%= @worker.tel %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @worker.status %>
+</p>
+
+<table class="table table-striped table-hover " style="width:400px" >
+  <thead>
+     <tr>
+           <th>Employee Slips</th>
+           <th></th>
+           <th></th>
+           <th></th>
+     </tr>
+  </thead>
+  <tbody>
+    <% @salaries.each do |salary| %>
+      <tr>
+        <td><%= salary.salary %></td>
+        <td><%= salary.nhif %></td>
+        <td><%= link_to 'Destroy', salary, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to 'Edit', edit_worker_path(@worker) %> |
+<%= link_to 'Back', workers_path %>

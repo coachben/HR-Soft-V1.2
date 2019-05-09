@@ -66,6 +66,13 @@ class WorkersController < ApplicationController
       format.json { head :no_content }
     end
   end
+  
+  
+  def import
+  #New method for import functionality
+    Worker.import(params[:file])
+    redirect_to workers_url, notice: 'Employees File was successfully uploaded.'
+  end
 
   private
     # Use callbacks to share common setup or constraints between actions.

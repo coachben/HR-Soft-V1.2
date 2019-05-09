@@ -6,14 +6,18 @@ Rails.application.routes.draw do
   devise_for :users
 
   resources :employees
-  resources :workers
   
-  resources :companies do
-  resources :employees
+  #gives route for import func
+  resources :workers do
+    collection { post :import }
   end
   
   resources :companies do
-  resources :workers
+    resources :employees
+  end
+  
+  resources :companies do
+    resources :workers, controller: 'companies/workers'
   end
   
   get 'home/index'

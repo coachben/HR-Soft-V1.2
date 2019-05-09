@@ -1,10 +1,11 @@
 
 
-<h1>Workers Roll</h1>
+<h1>Employees List - All Companies</h1>
 
-<table>
+<table class="table table-striped table-hover ">
   <thead>
     <tr>
+      <th>Employed at</th>
       <th>Code</th>
       <th>First name</th>
       <th>Last name</th>
@@ -23,6 +24,7 @@
   <tbody>
     <% @workers.each do |worker| %>
       <tr>
+        <td><%#= worker.company.name %></td>
         <td><%= worker.code %></td>
         <td><%= worker.first_name %></td>
         <td><%= worker.last_name %></td>
