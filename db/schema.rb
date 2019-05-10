@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190423085152) do
+ActiveRecord::Schema.define(version: 20190510024058) do
 
   create_table "account_types", force: :cascade do |t|
     t.string   "name"
@@ -98,6 +98,16 @@ ActiveRecord::Schema.define(version: 20190423085152) do
     t.index ["worker_id"], name: "index_salaries_on_worker_id"
   end
 
+  create_table "tax_ranges", force: :cascade do |t|
+    t.integer  "income_min"
+    t.integer  "income_max"
+    t.decimal  "rate"
+    t.integer  "tax_from_lower_range"
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
+    t.index ["income_min", "income_max"], name: "index_tax_ranges_on_income_min_and_income_max"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "",    null: false
     t.string   "encrypted_password",     default: "",    null: false
@@ -128,9 +138,10 @@ ActiveRecord::Schema.define(version: 20190423085152) do
     t.string   "exprerience"
     t.integer  "tel"
     t.string   "status"
-    t.datetime "created_at",                        null: false
-    t.datetime "updated_at",                        null: false
-    t.decimal  "starting_salary",   default: "0.0", null: false
+    t.datetime "created_at",                                                null: false
+    t.datetime "updated_at",                                                null: false
+    t.decimal  "starting_salary",                           default: "0.0", null: false
+    t.decimal  "pay_rate",          precision: 4, scale: 2
     t.index ["company_id"], name: "index_workers_on_company_id"
   end
 
