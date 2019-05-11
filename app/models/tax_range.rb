@@ -11,12 +11,14 @@ class TaxRange < ApplicationRecord
     end
     
     def monthly_tax(monthly_salary)
+        #validate tax rate
         if monthly_salary > 0
-            vtr = self.valid_tax_rane(monthly_salary)
+            vtr = self.valid_tax_rate(monthly_salary)
             (vtr.tax_from_lower_range + ((monthly_salary - (vtr.income_min-1))*vtr.rate)).round(3)
         else
             nil
         end
     end
 
+end
 end

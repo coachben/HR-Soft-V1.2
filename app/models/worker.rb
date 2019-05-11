@@ -5,8 +5,8 @@ class Worker < ApplicationRecord
     
     validates :first_name, presence: true
     validates :last_name, presence: true
-    validates :starting_salary, presence: true. numeriality: {only_integer: true, greater_than_or_equal_to: 0}
-    validates :pay_rate, presence: true, numericality: {greater_than_or_equal_to: 0.0, less_than_or_equal_to: 1.0}
+    #validates :starting_salary, presence: true, numericality: {only_integer: true, greater_than_or_equal_to: 0}
+    #validates :pay_rate, presence: true, numericality: {greater_than_or_equal_to: 0.0, less_than_or_equal_to: 1.0}
     
     def full_name
         "#{first_name}, #{last_name}"

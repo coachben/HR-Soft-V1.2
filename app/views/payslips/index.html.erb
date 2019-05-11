@@ -1,3 +1,33 @@
 <% @title = 'Employee Payslip' %>
 
 <%= render 'slip_sheet' %>
+
+<h3>Create Payslips</h3>
+<%= form_for :payslips, url: payslips_multiple_path,  method: :post, remote: :true, html: {class: 'form-horizontal'} do |f| %>
+  <div class="form-group">
+    <%= f.label :worker_id, 'Select employees:', class: 'control-label col-sm-2' %>
+    <div class="col-xs-10">
+      <%= f.select :worker_id, options_from_collection_for_select(@workers_for_select, :id, :full_name), {include_blank: false, include_hidden: false}, multiple: true, size: 5, class: 'form-control', required: true %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :payslip_start_date, 'Start Date:', class: 'control-label col-sm-2' %>
+    <div class="col-xs-10 col-sm-3 col-md-3">
+      <%= f.date_field :payslip_start_date, class: 'form-control input-medium', required: true %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :payslip_end_date, 'End Date:', class: 'control-label col-sm-2' %>
+    <div class="col-xs-10 col-sm-3 col-md-3">
+      <%= f.date_field :payslip_end_date, class: 'form-control input-medium', required: true %>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-xs-10 col-sm-offset-2 col-sm-3 col-md-offset-2 col-md-10">
+      <%= f.submit 'Generate Payslips', class: 'btn btn-success' %>
+    </div>
+  </div>
+<% end %>
+
+
+<%= render 'list' %>

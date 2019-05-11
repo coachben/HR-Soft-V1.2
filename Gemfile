@@ -25,7 +25,8 @@ gem "cocoon"
 gem 'rails_admin_rollincode', '~> 1.0'
 gem 'rails_admin', git: 'https://github.com/sferik/rails_admin.git'
 gem 'cancancan'
-
+#a simple and tasty way to add breadcrumbs
+gem 'crummy'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'

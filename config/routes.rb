@@ -30,6 +30,11 @@ Rails.application.routes.draw do
     resources :payslips
 
   end
+  
+  get '/payslips', to: 'payslips#index', as: :payslips
+  post '/payslips/multiple', to: 'payslips#show_multiple', as: :payslips_multiple
+  get '/payslips/multiple', to: 'payslips#show_multiple', as: :payslips_export_csv
+   
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
